@@ -1,7 +1,8 @@
-[gd_scene load_steps=53 format=3 uid="uid://meom23t0oi37"]
+[gd_scene load_steps=54 format=3 uid="uid://meom23t0oi37"]
 
 [ext_resource type="Script" path="res://Scene/player.gd" id="1_qx0xk"]
 [ext_resource type="Texture2D" uid="uid://bt680g67jqqek" path="res://Character/detective.png" id="2_p0fxg"]
+[ext_resource type="PackedScene" uid="uid://cxhvdwunqnv57" path="res://Scene/menu.tscn" id="3_t2883"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_swaji"]
 atlas = ExtResource("2_p0fxg")
@@ -396,3 +397,10 @@ autoplay = "idle_down"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3.5)
 shape = SubResource("RectangleShape2D_1vk4m")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Menu" parent="CanvasLayer" instance=ExtResource("3_t2883")]
